@@ -45,8 +45,9 @@ const insertDocuments = function(db, callback) {
         }
     ], function(err, result) {
       assert.equal(err, null);
-      assert.equal(3, result.result.n);
-      assert.equal(3, result.ops.length);
+      assert.equal(3,result.insertedCount);
+      assert.equal(3,Object.keys(result.insertedIds).length);
+// https://stackoverflow.com/questions/68474512/mongodb-nodejs-error-assert-equal3-result-result-n-not-working-giving-error
       console.log("Inserted 3 documents into the collection");
       callback(result);
     });
