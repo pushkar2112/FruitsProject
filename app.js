@@ -22,7 +22,7 @@ client.connect(function(err) {
   })
   
 });
-
+ 
 const insertDocuments = function(db, callback) {
     // Get the documents collection
     const collection = db.collection('fruits');
