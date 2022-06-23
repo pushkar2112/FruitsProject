@@ -16,7 +16,7 @@ const fruit = new Fruit ({
   review: "Pretty solid as a fruit!"
 });
 
-fruit.save()
+// fruit.save()
  
 
 
