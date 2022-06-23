@@ -51,7 +51,7 @@ const banana = new Fruit({
   review: "It's Good!"
 });
 
-Fruit.insertMany([kiwi, ornage, banana], function(errr){
+Fruit.insertMany([kiwi, orange, banana], function(err){
   if (err) {
     console.log(err);
   } else {
