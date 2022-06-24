@@ -18,7 +18,7 @@ const fruitSchema = new mongoose.Schema ({
 const Fruit = mongoose.model("Fruit", fruitSchema);
 
 const fruit = new Fruit ({
-  // name: "Peaches",
+  name: "Peaches",
   rating: 10,
   review: "Peaches are so yummy!"
 });
