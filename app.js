@@ -41,24 +41,32 @@ const person = new Person ({
 // person.save()
 
 
-Fruit.find(function(err, fruits){
-  if (err){
-    console.log(err);
-  } else {
+// Fruit.find(function(err, fruits){
+//   if (err){
+//     console.log(err);
+//   } else {
 
-    mongoose.connection.close()
+//     mongoose.connection.close()
 
-    fruits.forEach(function(fruit){
-      console.log(fruit.name);
-    });
-  }
-});
+//     fruits.forEach(function(fruit){
+//       console.log(fruit.name);
+//     });
+//   }
+// });
 
 
-Fruit.updateOne({_id: "62b3ee894d8214f03f02f68d"}, {name: "Kiwi"}, function(err) {
+// Fruit.updateOne({_id: "62b3ee894d8214f03f02f68d"}, {name: "Kiwi"}, function(err) {
+//   if (err){
+//     console.log(err);
+//   }  else {
+//     console.log("Succesfully updated!!");
+//   }
+// })
+
+Fruit.deleteOne({name: "Orange"}, function(err){
   if (err){
     console.log(err);
   }  else {
-    console.log("Succesfully updated!!");
+    console.log("Succesfully deleted!!");
   }
 })
