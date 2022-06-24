@@ -23,7 +23,7 @@ const fruit = new Fruit ({
   review: "Peaches are so yummy!"
 });
 
-fruit.save()
+// fruit.save()
  
 
 const personSchema = new mongoose.Schema ({
@@ -53,3 +53,12 @@ Fruit.find(function(err, fruits){
     });
   }
 });
+
+
+Fruit.updateOne({_id: "62b3ee894d8214f03f02f68d"}, {name: "Kiwi"}, function(err) {
+  if (err){
+    console.log(err);
+  }  else {
+    console.log("Succesfully updated!!");
+  }
+})
