@@ -18,9 +18,9 @@ const fruitSchema = new mongoose.Schema ({
 const Fruit = mongoose.model("Fruit", fruitSchema);
 
 const fruit = new Fruit ({
-  name: "Peaches",
+  name: "Pineapple",
   rating: 10,
-  review: "Peaches are so yummy!"
+  review: "Pineapples are so yummy!"
 });
 
 // fruit.save()
@@ -28,17 +28,19 @@ const fruit = new Fruit ({
 
 const personSchema = new mongoose.Schema ({
   name: String,
-  age: Number
+  age: Number,
+  favouriteFruit: fruitSchema
 });
 
 const Person = mongoose.model("Person", personSchema);
 
 const person = new Person ({
-  name: "John",
-  age: 37
+  name: "Amy",
+  age: 12,
+  favouriteFruit: fruit
 });
 
-// person.save()
+person.save()
 
 
 // Fruit.find(function(err, fruits){
